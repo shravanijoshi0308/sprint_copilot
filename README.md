@@ -1,6 +1,6 @@
 # Sprint Copilot
 
-![Tests](https://github.com/shravanijoshi0308/sprint-copilot/actions/workflows/tests.yml/badge.svg)
+![Tests](https://github.com/shravanijoshi0308/sprint_copilot/actions/workflows/tests.yml/badge.svg)
 
 Sprint Copilot is a small AI agent that takes over the routine coordination work a scrum master does every morning.
 

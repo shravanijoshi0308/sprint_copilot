@@ -27,6 +27,9 @@ def _days_since(iso: str | None) -> int | None:
     # Broken date text -> return None instead of crashing
     except ValueError:
         return None
+    # No time zone in the date? Treat it as UTC so we can subtract safely
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
     return (datetime.now(timezone.utc) - dt).days
 
 

@@ -47,3 +47,9 @@ def test_flags_pr_open_too_long():
     wi = _data("In Progress", updated=_days_ago(0), prs=[pr])
     findings = find_stuck(matcher.match(wi), wi)
     assert any("PR #7" in f for f in findings)
+
+
+def test_date_without_timezone_does_not_crash():
+    """A date without a time zone is read as UTC instead of crashing."""
+    from sprint_copilot.stuck import _days_since
+    assert _days_since("2026-10-01T10:00:00") is not None

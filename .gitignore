@@ -1,0 +1,11 @@
+# secrets - never commit
+.env
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+.venv/
+# local data
+sprint_copilot/manual_links.json
+.DS_Store
